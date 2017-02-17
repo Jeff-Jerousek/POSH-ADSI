@@ -9,7 +9,7 @@ $search.Filter = "(&(cn=$env:COMPUTERNAME)(objectcategory=Computer))"
 $result = $search.FindOne()
 $computer = [ADSI]$result.path
 
-#write new description on Object
+#return managedBy
 $computer.managedBy
 
 }
